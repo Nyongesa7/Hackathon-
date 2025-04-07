@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Nyongesa | Developer Portfolio</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation section */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(37, 37, 43, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navigation ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+        }
+
+        .navigation ul li {
+            text-decoration: none;
+            padding: 8px 25px;
+            color: white;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .navigation ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 25px;
+            transition: all .5s ease;
+            border-radius: 10px;
+        }
+
+        .navigation ul li a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px white;
+        }
+
+        /* Home section */
+        .hero {
+            position: relative;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        }
+
+        .headings {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .headings h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 4em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .btn {
+            color: rgb(0, 0, 0);
+            padding: 18px 40px;
+            transition: all .5s ease;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: rgb(4, 4, 4);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 0 10px white;
+        }
+
+        /* About section */
+        .about-section {
+            padding: 4rem 2rem;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Portfolio section */
+        .portfolio-section {
+            padding: 4rem 2rem;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .portfolio-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: left;
+        }
+
+        .portfolio-content ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        /* Contact section */
+        .contact-section {
+            padding: 4rem 2rem;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #21867a;
+            box-shadow: 0 0 0 2px rgba(33, 134, 122, 0.2);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #21867a;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background-color: #1a6b61;
+        }
+
+        /* Footer */
+        .footer {
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: rgba(37, 37, 43, 0.5);
+        }
+
+        .copyright {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="Home" class="hero">
+        <div class="headings">
+            <h1>Hi! I AM <br>JOHN NYONGESA</h1>
+            <button class="btn">Hire Me</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="About" class="about-section">
+        <h1 class="section-title">About Me</h1>
+        <div class="about-content">
+            <p>
+                I'm John, a passionate Software Engineering student with a keen interest in building innovative, 
+                user-centric applications. Currently pursuing my degree, I've gained a solid foundation in programming, 
+                problem-solving, and system design.
+            </p>
+            <p>
+                I have hands-on experience in frontend development, crafting responsive interfaces with HTML, CSS, 
+                and JavaScript, along with strong database management skills. My goal is to develop meaningful software 
+                solutions that address real-world challenges.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio/Experience Section -->
+    <section id="Portfolio" class="portfolio-section">
+        <h1 class="section-title">My Background</h1>
+        <div class="portfolio-content">
+            <p>
+                With six years of professional experience across banking and social work, I bring unique perspectives 
+                to software development:
+            </p>
+            <ul>
+                <li><strong>2 years in banking:</strong> Developed problem-solving skills and financial system expertise</li>
+                <li><strong>4 years in social work:</strong> Honed communication and user empathy - skills I now apply to UX design</li>
+            </ul>
+            <p>
+                As a Software Engineering student, I combine this experience with technical skills in frontend development 
+                and database management to build practical, user-focused applications.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="+1 (123) 456-7890">
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea id="message" class="form-textarea" required placeholder="How can I help you?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="copyright">© 2025 John Nyongesa. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
